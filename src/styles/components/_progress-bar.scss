@@ -1,0 +1,35 @@
+.progress-bar-wrapper {
+  width: 30%;
+  height: 15px;
+  background-color: $color__default--gray;
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  .progress-bar-action {
+    width: 92%;
+    display: block;
+    background-color: #e73445;
+    height: 15px;
+    position: absolute;
+    top: 0;
+  }
+
+  .progress-percentage {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    vertical-align: top;
+    color: $color__default--white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@include desktop-view {
+  .progress-bar-wrapper {
+    top: 16px;
+  }
+}

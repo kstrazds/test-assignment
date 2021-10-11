@@ -1,0 +1,56 @@
+// I never do nesting more than 6 steps
+.buttons-wrapper {
+  .actions-toolbar {
+    .button-backwards,
+    .button-forward {
+      display: inline-block;
+
+      .action {
+        border-radius: 0;
+        min-width: 120px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px;
+        border: 0;
+        cursor: pointer;
+
+        span {
+          font-size: 16px;
+          line-height: 24px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .button-backwards {
+      span::before {
+        content: '<';
+        font-size: 24px;
+        line-height: 24px;
+        vertical-align: bottom;
+        margin-right: 10px;
+      }
+
+      button:disabled {
+        border: 1px solid $color__button-disabled--gray;
+      }
+    }
+
+    .button-forward {
+      float: right;
+
+      .action.primary {
+        background-color: $color__quiz--red;
+        color: $color__default--white;
+
+        span::after {
+          content: '>';
+          font-size: 24px;
+          line-height: 24px;
+          vertical-align: bottom;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+/**
+ * In this case mobile and desktop styling didn't differ too much, but usually I start with mobile styling
+ */
+
+* {
+  font-family: $font__poppins;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#app {
+  padding-bottom: 60px;
+  position: relative;
+  min-height: 100vh;
+
+  &::after {
+    content: '';
+    border: 4px solid $color__quiz--red;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.quiz-container {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 20px;
+
+  .page-title h1 {
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+
+  .project-logo-wrapper {
+    padding-top: 20px;
+
+    img {
+      max-width: 170px;
+    }
+  }
+
+  .introduction-wrapper {
+    margin-bottom: 40px;
+    position: relative;
+
+    .page-subtitle p {
+      margin-top: 10px;
+    }
+  }
+}
+
+@include desktop-view {
+  .quiz-container {
+    .introduction-wrapper {
+      margin-bottom: 80px;
+
+      .page-title h1 {
+        font-size: 32px;
+      }
+    }
+  }
+}
